@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+    <style>
+        .title_margin {
+            margin-top: 50px;
+        }
+
+        body {
+            font-family: 'MuseoModerno', sans-serif;
+            background-color: ECEBE6;
+        }
+
+        .top_header {
+            font-weight: bold;
+        }
+
+        .container {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        .another-container {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="title_margin">
+        <h1 class="top_header">
+            <center><strong>EmpowerU: A Mentorship Program for Marginalized Students</strong></center>
+        </h1>
+    </div>
+    <div class="container">
+        <h2 class="top_header">
+            <center> Mission Statement</center>
+        </h2>
+    </div>
+    <div class="container">
+        <p>
+            <center>We are committed to fostering networking opportunities
+                for students hailing from underrepresented communities
+                and diverse social backgrounds, advancing our mission
+                to promote inclusivity and equitable access.</center>
+        </p>
+    </div>
+    <div class="container">
+        <h2 class="top_header">
+            <center>What do we provide?</center>
+        </h2>
+    </div>
+    <div class="container">
+        <p>
+            <center>We provide our members with exclusive access to
+                comprehensive databases comprising alumni and
+                current students who share similar backgrounds.
+                Our aim is to foster connections, creating
+                opportunities within their respective
+                fields of study.</center>
+        </p>
+    </div>
+    <!-- look how to center button -->
+    <div class="container" style="text-align: center">
+        <a href="{{ url_for('signup') }}"><img
+                src="https://freepngimg.com/save/24804-sign-up-button-transparent-background/700x242"
+                alt="HTML tutorial" style="width:181px;height:69px;"></a>
+    </div>
+    <div class="another-container" style="text-align: center;">
+        <img src="https://cdn.pixabay.com/photo/2018/11/29/21/51/social-media-3846597_1280.png" width="950" height="477"
+            alt="Networking" class="center" />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'MuseoModerno', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <!--
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                //Get form data
+                const formData = new FormData(form);
+
+                //send form data via a POST request using Fetch API
+                fetch('http://localhost:8000/forms/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            //Handle success response
+                            console.log('Form data submitted successfully');
+                            //reset form after successful submission
+                            form.reset();
+                        } else {
+                            //handle not successful response
+                            console.error('form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        //Handle network errors or exeptions
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script> -->
+</head>
+
+
+
+<body>
+    <div class="split left">
+        <div class="centered">
+            <h1>Match With a Mentor</h1>
+            <p>Tell us about yourself and get matched with a mentor who knows what it's like to walk your path</p>
+        </div>
+    </div>
+
+    <div class="split right">
+        <div id="medium">
+            <form name="form" id="form" action="{{ url_for('predict')}}" method="post">
+                <label class="textbox" for="name">Name</label> <br>
+                <input type="text" id="name" name="name"><br>
+
+                <label class="textbox" for="industry">Industry</label> <br>
+                <input type="text" id="industry" name="industry"><br>
+
+                <label class="textbox" for="position">Position</label> <br>
+                <input type="text" id="position" name="position"><br>
+
+                <label class="textbox" for="email">Email</label> <br>
+                <input type="email" id="email" name="email"><br>
+
+                <label class="textbox" for="phoneNumber">Phone</label> <br>
+                <input type="tel" id="phoneNumber" name="phoneNumber"><br>
+
+                <label id="community" for="communities">Communities You Identify With</label> <br>
+                <input type="checkbox" id="community1" name="community1" value="racial">
+                <label for="community1">Racial Minority</label> <br>
+                <div id="cummunity1options">
+                    <input class="appear" type="checkbox" id="black" name="black" value="black">
+                    <label for="black">Black or African American</label><br>
+
+                    <input class="appear" type="checkbox" id="asian" name="asian" value="asian">
+                    <label for="asian">Asian</label><br>
+
+                    <input class="appear" type="checkbox" id="white" name="white" value="white">
+                    <label for="white">White</label><br>
+
+                    <input class="appear" type="checkbox" id="native" name="native" value="native">
+                    <label for="native">American Indian or Alaska Native</label><br>
+
+                    <input class="appear" type="checkbox" id="islander" name="islander" value="islander">
+                    <label for="islander">Native Hawaiian or Other Pacific Islander</label><br>
+
+                    <input class="appear" type="checkbox" id="hispanic" name="hispanic" value="hispanic">
+                    <label for="hispanic">Hispanic or Latino</label><br>
+
+                    <input class="appear" type="checkbox" id="otherRaceCheckbox" name="otherRaceCheckbox">
+                    <label for="otherRaceCheckbox">Other</label>
+                    <input class="appear" type="text" id="otherText" name="otherText"><br>
+                </div>
+
+                <input type="checkbox" id="community2" name="community2" value="LGBT">
+                <label for="community2">LGBT+</label> <br>
+                <div id="cummunity2options">
+                    <input class="appear" type="checkbox" id="lesbian" name="lesbian" value="lesbian">
+                    <label for="lesbian">Lesbian</label><br>
+
+                    <input class="appear" type="checkbox" id="gay" name="gay" value="gay">
+                    <label for="gay">Gay</label><br>
+
+                    <input class="appear" type="checkbox" id="bisexual" name="bisexual" value="bisexual">
+                    <label for="bisexual">Bisexual</label><br>
+
+                    <input class="appear" type="checkbox" id="asexual" name="asexual" value="asexual">
+                    <label for="asexual">Asexual</label><br>
+
+                    <input class="appear" type="checkbox" id="otherSexualCheckbox" name="otherSexualCheckbox">
+                    <label for="otherSexualCheckbox">Other Sexual Minority</label>
+                    <input class="appear" type="text" id="otherSexualText" name="otherText"><br>
+
+                    <input class="appear" type="checkbox" id="transwoman" name="transwoman" value="transwoman">
+                    <label for="transwoman">Transgender Woman</label><br>
+
+                    <input class="appear" type="checkbox" id="transman" name="transman" value="transman">
+                    <label for="transman">Transgender Man</label><br>
+
+                    <input class="appear" type="checkbox" id="nonbinary" name="nonbinary" value="nonbinary">
+                    <label for="nonbinary">Nonbinary</label><br>
+
+                    <input class="appear" type="checkbox" id="otherGenderCheckbox" name="otherGenderCheckbox">
+                    <label for="otherGenderCheckbox">Other Gender Minority</label>
+                    <input class="appear" type="text" id="otherGenderText" name="otherGenderText"><br>
+                </div>
+
+                <input type="checkbox" id="community3" name="community3" value="genderminority">
+                <label for="community3">Gender Minority in Industry</label> <br>
+
+                <input type="checkbox" id="community4" name="community4" value="economicstatus">
+                <label for="community4">Low Socioeconomic Status</label> <br>
+
+                <input type="checkbox" id="community5" name="community5" value="firstgen">
+                <label for="community5">First Generation</label> <br>
+
+                <label class="textbox" for="bio">Bio</label> <br>
+                <input type="text" id="bio" name="bio"><br>
+
+                <button type="submit" class="btn-submit">Get Results</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

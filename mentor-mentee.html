@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'MuseoModerno', sans-serif;
+            background-color: ECEBE6;
+        }
+
+        .title_margin {
+            margin-top: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="title_margin">
+        <h1>
+            <center>You've been matched with: {{ name }}</center>
+        </h1>
+    </div>
+
+    <div style="text-align: center;">
+        <img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png" width="120"
+            height="120" alt="Person" class="center" />
+    </div>
+
+    <div class="another-container">
+        <h2>
+            <center>Name: {{ name }}</center>
+        </h2>
+    </div>
+
+    <div class="another-container">
+        <ul>
+            <center>Industry: {{ prof }}</center>
+            <center>Reach Out At: {{ email }}</center>
+            <center>You have: {{ similarities }} in common!</center>
+        </ul>
+    </div>
+
+    <div class="another-container">
+
+
+
+        <center><a href="{{ url_for('home') }}"><button class="button-6">Back to Home</button></a></center>
+    </div>
+</body>
+
+</html>

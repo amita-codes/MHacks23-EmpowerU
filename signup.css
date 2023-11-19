@@ -1,0 +1,141 @@
+* {
+  background: #f2f2f2;
+}
+
+/*Checkboxes*/
+
+#cummunity1options,
+#cummunity2options {
+  display: none;
+}
+
+#community1:checked ~ #cummunity1options {
+  display: block;
+}
+
+#community2:checked ~ #cummunity2options {
+  display: block;
+}
+
+/*Splitscreen alignment*/
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #ff0000;
+
+  background-image: url("submitpagephotonew.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.right {
+  right: 0;
+  background-color: #ecebe6;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*Form looking pretty*/
+
+#medium {
+  padding-top: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+form {
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  margin-bottom: 10px;
+
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgb(194, 194, 194);
+  height: 30px;
+  width: 90%;
+}
+
+.textbox,
+#community {
+  font-size: 18px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.appear {
+  position: abolute;
+  margin-left: 20px;
+}
+
+#community5 {
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  margin-top: 15px;
+  transform: scale(1.5);
+}
+
+.btn-submit {
+  margin-top: 20px;
+  margin-bottom: 70px;
+
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 0.5px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: rgb(233, 0, 241);
+  box-shadow: inset 0 0 0 2px rgb(233, 0, 241);
+  background-color: transparent;
+  height: 48px;
+  :hover {
+    color: #fff;
+    background-color: #616467;
+  }
+}
+
+/*left side pretty*/
+
+h1 {
+  font-weight: 1000;
+  font-size: 50px;
+}
+
+p {
+  font-weight: 600;
+}
